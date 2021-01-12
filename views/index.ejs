@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #efefef;
+        }
+
+        .title {
+            font-size: 4em;
+        }
+
+        .btn-custom {
+            color: #fff;
+            background-color: #4697ec;
+            border-color: #007bff;
+            height: 50px;
+            width: 120px;
+        }
+
+        .btn-custom:hover {
+            color: #fff !important;
+            background-color: #2472c5;
+        }
+
+        .container {
+            width: 50vw;
+            height: 10vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="title">Pages</p>
+    <div class="container">
+        <button type="submit" class="btn btn-custom" onclick="window.location.href='login'">Login</button>
+        <button type="submit" class="btn btn-custom" onclick="window.location.href='register'">Register</button>
+    </div>
+</body>
+
+</html>

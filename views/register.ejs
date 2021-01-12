@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #efefef;
+        }
+
+        .title {
+            font-size: 3.3em;
+            text-align: center;
+        }
+
+        .btn-custom {
+            color: #fff;
+            background-color: #4697ec;
+            border-color: #007bff;
+            height: 50px;
+            width: 120px;
+        }
+
+        .btn-custom:hover {
+            color: #fff !important;
+            background-color: #2472c5;
+        }
+
+        .container {
+            width: 350px;
+            height: 90px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        form {
+            box-shadow: 0 0 7px 5px black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            margin: 0 20px 10px 20px;
+            border-radius: 4px;
+            border: 2px solid #2c64a0;
+            padding-left: 10px;
+        }
+
+        label {
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        a {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-success {
+            border-color: #155724 !important;
+        }
+
+        .alert-danger {
+            border-color: #721c24 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert">
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const msg = urlParams.get('msg');
+            const type = urlParams.get('type');
+            if (msg != null) {
+                let message = document.getElementsByClassName("alert")[0];
+                if (type == "error") {
+                    message.className = "alert alert-danger";
+                    document.write(msg);
+                    setTimeout(() => {message.style.display = "none"}, 5000);
+                } else if (type == "success") {
+                    message.className = "alert alert-success";
+                    document.write(msg);
+                    setTimeout(() => {message.style.display = "none"}, 5000);
+                }
+            }
+        </script>
+    </div>
+    <form method="POST">
+        <p class="title">Register</p>
+        <label for="user">Username:</label>
+        <input type="text" name="user" placeholder="..." required>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" placeholder="..." required>
+        <label for="pass2">Repeat Password:</label>
+        <input type="password" name="pass2" placeholder="..." required>
+        <div class="container">
+            <a class="btn btn-custom" href="login">Login</a>
+            <button type="submit" class="btn btn-custom">Register</button>
+        </div>
+    </form>
+</body>
+
+</html>
