@@ -1,1 +1,1 @@
-{"carlos":"1234","pepe":"0000","juan":"4321","eric":"hola","miquel":"qwer"}
+[{"name":"carlos","pass":"1234","token":""},{"name":"pepe","pass":"0000","token":""},{"name":"juan","pass":"4321","token":""},{"name":"elsa","pass":"2020","token":""},{"name":"new_user","pass":"password","token":""}]
